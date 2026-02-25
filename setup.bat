@@ -87,10 +87,10 @@ echo.
 REM === npm global packages ===
 echo [INFO] Checking npm global packages...
 
-call :NpmEnsure typescript
-call :NpmEnsure typescript-language-server
-call :NpmEnsure @anthropic-ai/claude-code
-call :NpmEnsure @tobilu/qmd
+call :NpmEnsure typescript                tsc
+call :NpmEnsure typescript-language-server typescript-language-server
+call :NpmEnsure @anthropic-ai/claude-code  claude
+call :NpmEnsure @tobilu/qmd                qmd
 
 echo.
 
@@ -210,11 +210,13 @@ REM ================================================================
 REM  NpmEnsure - install npm package if not present
 REM ================================================================
 :NpmEnsure
+REM %1=package name  %2=command name
 set "_PKG=%~1"
+set "_CMD=%~2"
 <nul set /p="       Checking: !_PKG! ... "
-npm list -g --depth=0 --offline "!_PKG!" >nul 2>&1
+where !_CMD! >nul 2>&1
 if !errorlevel! equ 0 (
-    echo already installed
+    echo found
     goto :eof
 )
 echo not found, installing...
