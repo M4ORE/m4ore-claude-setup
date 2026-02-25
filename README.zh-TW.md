@@ -48,6 +48,8 @@ Setup 腳本會從 `~/.claude/` 建立 **Symlink** 指向本 repo，修改 repo 
 
 重大功能或重構前自動強制進入 **Plan Mode**，在 `docs/design/` 產生編號 Design Doc，使用標準化模板。詳見 [`skills/design-first-development/SKILL.md`](./skills/design-first-development/SKILL.md)。
 
+> 原始專案：[M4ORE/design-first-development-skill](https://github.com/M4ORE/design-first-development-skill)
+
 ## Windows Symlink 注意事項
 
 Windows 需要開啟 **開發人員模式** 才能在不需系統管理員的情況下建立 Symlink。

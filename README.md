@@ -48,6 +48,8 @@ It also installs these npm global packages (if not already present):
 
 Automatically enforces **Plan Mode** before any major feature or refactor. Generates numbered Design Docs in `docs/design/` with a standardized template. See [`skills/design-first-development/SKILL.md`](./skills/design-first-development/SKILL.md) for details.
 
+> Source: [M4ORE/design-first-development-skill](https://github.com/M4ORE/design-first-development-skill)
+
 ## Windows Symlink Note
 
 Windows requires **Developer Mode** to create symlinks without admin privileges.
