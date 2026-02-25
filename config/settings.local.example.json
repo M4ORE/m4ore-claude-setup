@@ -1,0 +1,6 @@
+{
+  "_comment": "Copy to ~/.claude/settings.local.json and customize. Gitignored.",
+  "env": {
+    "ANTHROPIC_API_KEY": ""
+  }
+}

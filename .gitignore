@@ -1,0 +1,12 @@
+config/settings.local.json
+*.backup
+*.backup.*
+node_modules/
+.DS_Store
+Thumbs.db
+Desktop.ini
+.cache/
+*.jsonl
+.credentials.json
+.vscode/
+.idea/
