@@ -152,9 +152,9 @@ echo.
 echo ========================================================
 echo.
 echo [INFO] Next Steps:
-echo   1. copy config\settings.local.example.json %USERPROFILE%\.claude\settings.local.json
-echo   2. Configure mcp.json manually if needed
-echo   3. Run 'claude' to verify everything works
+echo   1. Run 'claude' to verify everything works
+echo   2. (Optional) Configure mcp.json manually if needed
+echo   3. (Optional) copy config\settings.local.example.json %USERPROFILE%\.claude\settings.local.json
 echo.
 goto :end
 
