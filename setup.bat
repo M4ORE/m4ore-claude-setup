@@ -211,12 +211,13 @@ REM  NpmEnsure - install npm package if not present
 REM ================================================================
 :NpmEnsure
 set "_PKG=%~1"
+<nul set /p="       Checking: !_PKG! ... "
 npm list -g --depth=0 "!_PKG!" >nul 2>&1
 if !errorlevel! equ 0 (
-    echo [OK] Already installed: !_PKG!
+    echo already installed
     goto :eof
 )
-echo [INFO] Installing: !_PKG!
+echo not found, installing...
 npm install -g "!_PKG!"
 if !errorlevel! equ 0 (
     echo [OK] Installed: !_PKG!
