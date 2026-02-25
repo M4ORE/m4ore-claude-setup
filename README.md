@@ -12,13 +12,15 @@ cd ~/m4ore-claude-setup
 chmod +x setup.sh && ./setup.sh
 ```
 
-### Windows (PowerShell)
+### Windows (CMD)
 
-```powershell
-git clone <your-repo-url> ~\m4ore-claude-setup
-cd ~\m4ore-claude-setup
-.\setup.ps1
+```cmd
+git clone <your-repo-url> %USERPROFILE%\m4ore-claude-setup
+cd %USERPROFILE%\m4ore-claude-setup
+setup.bat
 ```
+
+> PowerShell 也可以用：`.\setup.ps1`
 
 ## What It Does
 
@@ -45,14 +47,14 @@ Windows requires **Developer Mode** enabled to create symlinks without admin.
 
 - **Settings > Update & Security > For developers > Developer Mode**
 
-If symlinks aren't available, `setup.ps1` automatically falls back to **Copy mode**. In Copy mode, after `git pull` you must re-run `setup.ps1` to sync changes.
+If symlinks aren't available, `setup.bat` / `setup.ps1` automatically falls back to **Copy mode**. In Copy mode, after `git pull` you must re-run the setup script to sync changes.
 
 ## Updating
 
 After pulling new changes:
 
 - **Symlink mode** (Linux/macOS/Windows with Developer Mode): Changes take effect immediately.
-- **Copy mode** (Windows without Developer Mode): Re-run `.\setup.ps1`.
+- **Copy mode** (Windows without Developer Mode): Re-run `setup.bat` or `.\setup.ps1`.
 
 ## Repo Structure
 
@@ -62,7 +64,8 @@ m4ore-claude-setup/
 ├── .gitignore
 ├── CLAUDE.md                              # Global Claude instructions
 ├── setup.sh                               # Linux/macOS setup
-├── setup.ps1                              # Windows setup
+├── setup.bat                              # Windows setup (CMD)
+├── setup.ps1                              # Windows setup (PowerShell)
 ├── config/
 │   ├── settings.json                      # Shared Claude settings
 │   └── settings.local.example.json        # Local settings template
