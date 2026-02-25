@@ -220,7 +220,7 @@ if !errorlevel! equ 0 (
     goto :eof
 )
 echo not found, installing...
-npm install -g "!_PKG!"
+call npm install -g "!_PKG!"
 if !errorlevel! equ 0 (
     echo [OK] Installed: !_PKG!
 ) else (
