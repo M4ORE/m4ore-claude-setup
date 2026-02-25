@@ -212,7 +212,7 @@ REM ================================================================
 :NpmEnsure
 set "_PKG=%~1"
 <nul set /p="       Checking: !_PKG! ... "
-npm list -g --depth=0 "!_PKG!" >nul 2>&1
+npm list -g --depth=0 --offline "!_PKG!" >nul 2>&1
 if !errorlevel! equ 0 (
     echo already installed
     goto :eof
